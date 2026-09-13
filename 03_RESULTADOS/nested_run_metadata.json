@@ -1,0 +1,66 @@
+{
+  "created_utc": "2026-09-13T01:46:49.705983+00:00",
+  "seed": 2026,
+  "outer_splits": 5,
+  "inner_splits": 4,
+  "bootstrap_repetitions": 2000,
+  "grouping_unit": "petri_dish",
+  "target": "day_since_moisture",
+  "n_rows": 13452,
+  "n_bands": 204,
+  "n_grains": 2242,
+  "n_petri_dishes": 90,
+  "best_family": "SVR_RBF",
+  "data_sha256": "3ee66476e6564e6b20d6b3c87433517e04fb6ce99e8ea1625e3f8cc1a3c70cdd",
+  "run_signature": "2ac6e04bdea67ee7",
+  "pipeline_version": "dish_nested_v1",
+  "candidate_grid": {
+    "PLSR": [
+      "raw|n_components=10",
+      "raw|n_components=20",
+      "raw|n_components=30",
+      "snv|n_components=10",
+      "snv|n_components=20",
+      "snv|n_components=30",
+      "savgol_d1|n_components=10",
+      "savgol_d1|n_components=20",
+      "savgol_d1|n_components=30"
+    ],
+    "SVR_RBF": [
+      "snv|C=10;epsilon=0.05;gamma=scale",
+      "snv|C=10;epsilon=0.1;gamma=scale",
+      "snv|C=100;epsilon=0.05;gamma=scale",
+      "snv|C=100;epsilon=0.1;gamma=scale",
+      "savgol_d1|C=10;epsilon=0.05;gamma=scale",
+      "savgol_d1|C=10;epsilon=0.1;gamma=scale",
+      "savgol_d1|C=100;epsilon=0.05;gamma=scale",
+      "savgol_d1|C=100;epsilon=0.1;gamma=scale"
+    ],
+    "ExtraTrees": [
+      "raw|max_features=0.5;min_samples_leaf=1",
+      "raw|max_features=0.5;min_samples_leaf=2",
+      "raw|max_features=0.5;min_samples_leaf=5",
+      "raw|max_features=1;min_samples_leaf=1",
+      "raw|max_features=1;min_samples_leaf=2",
+      "raw|max_features=1;min_samples_leaf=5"
+    ]
+  },
+  "bootstrap_interpretation": "Paired dish-cluster percentile bootstrap of fixed OOF predictions; conditional uncertainty, without pipeline retraining or acquisition-session resampling.",
+  "consensus_preprocessing": "savgol_d1",
+  "consensus_parameter": "C=100;epsilon=0.05;gamma=scale",
+  "elapsed_seconds": 5.890625953674316,
+  "elapsed_seconds_note": "Elapsed time for this invocation, which may restore checkpoints; not cumulative historical fitting time.",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0"
+  },
+  "source_data_doi": "10.17894/ucph.71c22737-8005-4588-bd74-80bf7b5ac6b4",
+  "source_report_doi": "10.48550/arXiv.2504.16658",
+  "dataset_license": "CC BY-NC 4.0",
+  "target_definition": "Acquisition-stage index in day units: 0 is a dry pre-moisture reference; 1 to 5 are subsequent daily acquisitions. Intermediate continuous times are not validated.",
+  "released_script_sha256": "c8d77ef0fd5486a33690d16e100bbd7e6609a1af5781add21e7d925b9fa53f12",
+  "released_script_note": "Digest of accompanying release script, including completed-run guards and optional separate review diagnostics; primary fitting grids, splits, preprocessing and original OOF predictions are unchanged."
+}

@@ -1,0 +1,2 @@
+family,outer_fold,preprocessing,parameter,candidate_key,mae,rmse,r2,within_1_day,bias,fit_predict_seconds,n_train,n_test,n_train_dishes,n_test_dishes
+SVR_RBF,4,savgol_d1,C=100;epsilon=0.05;gamma=scale,savgol_d1|C=100;epsilon=0.05;gamma=scale,0.574003806425088,0.7998126473829649,0.7806741928295724,0.8125,-0.03435280996460775,28.19584584236145,10764,2688,72,18

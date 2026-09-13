@@ -1,0 +1,45 @@
+{
+  "status": "author_confirmation_required_before_submission_or_public_deposit",
+  "title": "Grouped Validation of Machine Learning for Moisture Exposure Stage Estimation in Barley Using NIR Spectra",
+  "author_identification_provided_by_user": true,
+  "authors_in_order": [
+    {"full_name": "Julián Coronel Reyes", "affiliation_ids": [1], "institutional_email": "jcoronel1@utmachala.edu.ec", "orcid": "0000-0002-7883-5388"},
+    {"full_name": "Vanessa Vergara-Lozano", "affiliation_ids": [2], "institutional_email": "vvergara@uagraria.edu.ec", "orcid": "0000-0002-0644-5946"},
+    {"full_name": "Carlota Delgado-Vera", "affiliation_ids": [2], "institutional_email": "cdelgado@uagraria.edu.ec", "orcid": "0000-0002-8527-6078"}
+  ],
+  "affiliations_by_id": {
+    "1": "Universidad Técnica de Machala, Facultad de Ciencias Agropecuarias, Av. Panamericana, Km. 5 1/2 Vía Machala-Pasaje, Ecuador",
+    "2": "Universidad Agraria del Ecuador, Facultad de Ciencias Agrarias, Av. 25 de Julio, Guayaquil, Ecuador"
+  },
+  "author_fields": ["full_name", "affiliations", "institutional_email", "orcid_if_available"],
+  "corresponding_author": "Julián Coronel Reyes",
+  "corresponding_author_email": "jcoronel1@utmachala.edu.ec",
+  "corresponding_author_designated_by_user": true,
+  "github_repository_url": null,
+  "manuscript_layout_requested_by_user": {
+    "page_target": 15,
+    "omit_standalone_sections": ["Author Contributions", "Funding", "Competing Interests", "AI assistance", "Data and Code Availability"],
+    "reproducibility_location": "Experimental Method section 4.6",
+    "workflow_figure": 1,
+    "prediction_figure": 2,
+    "spectral_figure": 3
+  },
+  "conference_registration_paid_by_university_reported_by_user": true,
+  "registration_payment_is_not_confirmation_of_research_funding": true,
+  "submission_disclosures_require_policy_check_and_author_confirmation": true,
+  "credit_roles": {
+    "Conceptualization": [],
+    "Methodology": [],
+    "Software": [],
+    "Validation": [],
+    "Formal analysis": [],
+    "Writing - original draft": [],
+    "Writing - review & editing": [],
+    "Supervision_if_applicable": []
+  },
+  "funding_statement_confirmed_by_authors": null,
+  "competing_interests_statement_confirmed_by_each_author": null,
+  "software_license_confirmed_by_rights_holders": null,
+  "zenodo_published_version_doi": null,
+  "all_authors_approved_final_manuscript_and_public_deposit": false
+}

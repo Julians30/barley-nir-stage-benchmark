@@ -14,13 +14,13 @@ Training-only PLS VIP and signed coefficients describe distributed spectral impo
 
 | Folder | Contents |
 | --- | --- |
-| `01_DATASET` | One prepared NPZ matrix, source attribution and licensing notices |
+| `01_DATASET` | Prepared matrix in verified binary parts, source attribution and licensing notices |
 | `02_CODIGO_NOTEBOOKS` | Nested-validation pipeline, review diagnostics, audits and executed validation notebook |
 | `03_RESULTADOS` | Original OOF predictions, candidate scores, bootstrap draws, diagnostic profiles, figures and compatible checkpoints |
 | `04_MANUSCRITO_CCIS` | Corrected Word manuscript with embedded workflow and spectral interpretation figures and this repository URL |
 | `tools` | Project packaging and repository integrity verification utilities |
 
-The NPZ is the only dataset copy included. Original archives, duplicate CSV exports, hyperspectral image cubes, temporary renders and unrelated teaching materials are not included. Review/deposit templates in `03_RESULTADOS/revision_r1` are retained unchanged as historical records; their pending-link text is not the current repository status. `REPOSITORY_STATUS.json` records the current URL and private visibility. No public DOI or Zenodo publication is claimed.
+The prepared NPZ is stored in 1 MiB binary parts to accommodate upload transport limits. The restore utility reconstructs the exact original file and verifies its SHA-256; spectra and metadata are unchanged. Original archives, duplicate CSV exports, hyperspectral image cubes, temporary renders and unrelated teaching materials are not included. Review/deposit templates in `03_RESULTADOS/revision_r1` are retained unchanged as historical records; their pending-link text is not the current repository status. `REPOSITORY_STATUS.json` records the current URL and private visibility. No public DOI or Zenodo publication is claimed.
 
 ## Data source and integrity
 
@@ -42,6 +42,7 @@ Use Python 3.12 (recorded run: 3.12.14). From the repository root:
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
+python tools/restore_dataset.py
 python tools/verify_repository.py
 ```
 
@@ -54,7 +55,7 @@ python -m pip install jupyterlab ipykernel nbformat nbclient
 python -m jupyter lab
 ```
 
-Open `02_CODIGO_NOTEBOOKS/02_VALIDACION_ANIDADA_CEBADA_NIR.ipynb`. Its default switches read and audit saved results. Run Jupyter from the root or code folder. The Colab-specific setup uses the original Drive layout `/content/drive/MyDrive/CITI2027_CEBADA_NIR`; copy these canonical folders there if using that route.
+Reconstruct the NPZ with `python tools/restore_dataset.py` before opening `02_CODIGO_NOTEBOOKS/02_VALIDACION_ANIDADA_CEBADA_NIR.ipynb`. Its default switches read and audit saved results. Run Jupyter from the root or code folder. The Colab-specific setup uses the original Drive layout `/content/drive/MyDrive/CITI2027_CEBADA_NIR`; copy these canonical folders there if using that route.
 
 To force a genuinely new primary fit, first copy the project so that the archived results remain untouched:
 

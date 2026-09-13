@@ -1,0 +1,2 @@
+scheme,held_out,family,preprocessing,parameter,mae,rmse,r2,within_1_day,bias,n_train,n_test,n_train_dishes,n_test_dishes,fit_predict_seconds
+leave_one_sample_group_out,laureate_1,SVR_RBF,savgol_d1,C=100;epsilon=0.05;gamma=scale,0.6138734345986301,0.8249122647779825,0.7666924875721804,0.7758333333333334,-0.1194792922052741,9852,3600,66,24,26.86975359916687

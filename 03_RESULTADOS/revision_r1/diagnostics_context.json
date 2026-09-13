@@ -1,0 +1,20 @@
+{
+  "version": "frozen_review_diagnostics_v1",
+  "data_sha256": "3ee66476e6564e6b20d6b3c87433517e04fb6ce99e8ea1625e3f8cc1a3c70cdd",
+  "primary_run_signature": "2ac6e04bdea67ee7",
+  "primary_oof_sha256": "42cf6520e0c86cc35e8ced1eeb30a0e05698a7538c7cd8aebe9d0b5bac056a64",
+  "primary_outer_sha256": "2e79c948f3c55a68d42dc34c66d766d3238885bcce99e1f5473749b209e77952",
+  "C_values": [
+    100,
+    300,
+    1000
+  ],
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0"
+  },
+  "wavelength_grid": "np.linspace(950,1650,204); approximate uniform range from source README; not exact camera calibration"
+}

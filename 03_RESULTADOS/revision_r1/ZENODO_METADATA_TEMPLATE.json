@@ -1,0 +1,28 @@
+{
+  "template_status": "incomplete_not_an_upload_request",
+  "metadata": {
+    "title": "Barley NIR acquisition-stage benchmark: dish-grouped nested validation and revision diagnostics",
+    "upload_type": "software",
+    "description": "Reproducibility package for a public barley NIR acquisition-stage benchmark. Includes executable code, a result-reading notebook, per-observation out-of-fold predictions, candidate-level internal search tables, partition and exploratory domain-transfer checks, training-only PLS VIP and coefficient profiles, frozen C=100/300/1000 SVR checks, software versions and SHA-256 manifests. Original all-stage nested SVR MAE is 0.576962; its saved post-moisture predictions have MAE 0.680003. Stage and acquisition session coincide in one exposure sequence, so session fingerprinting cannot be excluded. Added C diagnostics never select a replacement primary model from outer errors. Source and data-bearing components retain applicable CC BY-NC 4.0 attribution and non-commercial requirements; independently authored software licensing is a separate rights decision. See RIGHTS_AND_LICENSES.md.",
+    "creators": [
+      {"name": "Julián Coronel Reyes", "orcid": "0000-0002-7883-5388", "affiliation": "Universidad Técnica de Machala, Facultad de Ciencias Agropecuarias"},
+      {"name": "Vanessa Vergara-Lozano", "orcid": "0000-0002-0644-5946", "affiliation": "Universidad Agraria del Ecuador, Facultad de Ciencias Agrarias"},
+      {"name": "Carlota Delgado-Vera", "orcid": "0000-0002-8527-6078", "affiliation": "Universidad Agraria del Ecuador, Facultad de Ciencias Agrarias"}
+    ],
+    "keywords": ["barley", "NIR", "nested cross-validation", "dish-grouped validation", "PLS VIP", "support vector regression", "session confounding", "reproducibility"],
+    "version": "review-r1",
+    "license": null,
+    "related_identifiers": [
+      {"identifier": "10.17894/ucph.71c22737-8005-4588-bd74-80bf7b5ac6b4", "relation": "isDerivedFrom", "scheme": "doi"},
+      {"identifier": "10.48550/arXiv.2504.16658", "relation": "references", "scheme": "doi"}
+    ]
+  },
+  "required_before_use": [
+    "Confirm creators, order, affiliations and ORCIDs with all authors.",
+    "Confirm software rights and license; retain source-license notices and separately identify data-bearing components.",
+    "Review whether to deposit source spectra or instead link to the ERDA record.",
+    "Confirm public-deposit authorization and review manuscript/congress requirements.",
+    "Create a draft record; a reserved DOI alone is not proof of a published deposit.",
+    "Publish only after author approval, verify the published version DOI and insert it in the manuscript."
+  ]
+}

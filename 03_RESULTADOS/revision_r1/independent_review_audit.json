@@ -1,0 +1,16 @@
+{
+  "result": "passed",
+  "primary_run_signature": "2ac6e04bdea67ee7",
+  "review_version": "frozen_review_diagnostics_v1",
+  "metric_checks": 105,
+  "n_original_rows": 13452,
+  "n_frozen_C_rows": 40356,
+  "n_PLS_profile_rows": 2040,
+  "C100_equals_original_predictions": true,
+  "outer_membership_matches_primary": true,
+  "all_stage_mae": 0.5769617287216731,
+  "post_moisture_mae": 0.6800032500219051,
+  "dry_reference_mae": 0.061754122220513484,
+  "aggregation_reduction_percent": 15.153092473736374,
+  "scope": "Recalculation and partition/profile provenance checks of saved files; no causal validation or model refitting."
+}

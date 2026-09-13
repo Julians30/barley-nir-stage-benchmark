@@ -1,0 +1,2 @@
+scheme,held_out,family,preprocessing,parameter,mae,rmse,r2,within_1_day,bias,n_train,n_test,n_train_dishes,n_test_dishes,fit_predict_seconds
+leave_one_cultivar_out,Prospect,SVR_RBF,snv,C=100;epsilon=0.05;gamma=scale,0.8153198868791355,1.1516115223201635,0.5452997377118065,0.6994106090373281,-0.28485652880405293,7344,6108,49,41,11.04719877243042

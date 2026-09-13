@@ -1,0 +1,16 @@
+{
+  "completed_run_signature": "2ac6e04bdea67ee7",
+  "result": "passed",
+  "checks": [
+    "dataset digest",
+    "compound keys and six-stage coverage",
+    "outer and inner dish disjointness",
+    "one external prediction per row and family",
+    "saved metric recalculation",
+    "inner selection ranking",
+    "2000 paired bootstrap draws and interval quantiles per family",
+    "paired difference interval quantiles",
+    "six domain-test memberships and metric recalculation"
+  ],
+  "subset_interpretation": "Descriptive subsets of the same saved OOF predictions; no new fitting or independent test."
+}

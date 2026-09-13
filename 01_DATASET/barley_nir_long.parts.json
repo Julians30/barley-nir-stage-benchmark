@@ -1,0 +1,107 @@
+{
+  "filename": "barley_nir_long.npz",
+  "bytes": 20497950,
+  "sha256": "3ee66476e6564e6b20d6b3c87433517e04fb6ce99e8ea1625e3f8cc1a3c70cdd",
+  "parts": [
+    {
+      "path": "parts/barley_nir_long.npz.part001",
+      "bytes": 1048576,
+      "sha256": "e78725d26ccb497df4a704cba43d9305116a17b61b0d77463099bb70c3a5ef1d"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part002",
+      "bytes": 1048576,
+      "sha256": "cc7e1e56b4eebc70faae626cc1680938c833c21066c8994fb4639ffeb19cc1fc"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part003",
+      "bytes": 1048576,
+      "sha256": "8bc4444bdd4fe26ff8e665e78b6e30d613e4b56c32a4e40d34da2cad49f2a053"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part004",
+      "bytes": 1048576,
+      "sha256": "506cd3aef8bf1d5ee3381798e6d5107ecc85332c9fda6b21b3acef57f57735a8"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part005",
+      "bytes": 1048576,
+      "sha256": "6b4c0329ea6b428c02374450b4146043626280cf2c724e5c160f6a39cdcd3c31"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part006",
+      "bytes": 1048576,
+      "sha256": "aa9f5429cd73040198899c8d831381bbb8159fdea2fef112ef234b0ef0c3b381"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part007",
+      "bytes": 1048576,
+      "sha256": "917f8d080d4232387d87daa78b0238f5cb13ff83c7d3f9684945f86faf623731"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part008",
+      "bytes": 1048576,
+      "sha256": "b2c1a5e31710853ba8962e0ab126b7e227907f2a4c726c6701f9bef674fa4c78"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part009",
+      "bytes": 1048576,
+      "sha256": "6ef04b75d22f2d152620c00595c46402e0220b1d1a4cb9cd6db282ded097efc4"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part010",
+      "bytes": 1048576,
+      "sha256": "1e3b9f47a791dcfbbadc53aa6c8e1da93bc3a5d97141169675b0f78206a7a599"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part011",
+      "bytes": 1048576,
+      "sha256": "eaabd80d0f86aed06bd054abfb0284dccd97e44e32957543772e43caa19275b3"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part012",
+      "bytes": 1048576,
+      "sha256": "120ba11963a1282f0645c083117fdd9f09351a1b9c8a00b35590f0612461e0e5"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part013",
+      "bytes": 1048576,
+      "sha256": "ccd29c796d0245e979cc47a3bcdb96981fc93af291984518338c11da1267e1cc"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part014",
+      "bytes": 1048576,
+      "sha256": "6e835560bf795a865ab79e17ed3a68e9ba54e62578dc8d735eec0aa24685e606"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part015",
+      "bytes": 1048576,
+      "sha256": "944f564df14b2d720d9bd316afde45b6c37d5139e72e1d033471724f53ee42fe"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part016",
+      "bytes": 1048576,
+      "sha256": "78ef1887532e3be199623d24e017510c5854a03b5f04a5b1a84de69b2918bc2f"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part017",
+      "bytes": 1048576,
+      "sha256": "3eec83a7bc6d7d77f66e49489191ccafafebc2f87bd0b88ce8f5f0c29922a103"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part018",
+      "bytes": 1048576,
+      "sha256": "6edb1b33782db7e663707d9f82135daa04b2236929a659aa16fac148bd24b723"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part019",
+      "bytes": 1048576,
+      "sha256": "8b1ea66fbd670ef393087805d3d9f3bdb3fca35267b064d90d62d9ecb9f24a19"
+    },
+    {
+      "path": "parts/barley_nir_long.npz.part020",
+      "bytes": 575006,
+      "sha256": "1f0246110eac5f1b2555876a3460ee3845635ebd1ed9a624317e7c08ce143558"
+    }
+  ]
+}

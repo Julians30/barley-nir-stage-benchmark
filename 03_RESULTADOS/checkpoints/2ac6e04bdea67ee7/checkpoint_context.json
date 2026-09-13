@@ -1,0 +1,45 @@
+{
+  "pipeline_version": "dish_nested_v1",
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit_learn": "1.8.0"
+  },
+  "data_sha256": "3ee66476e6564e6b20d6b3c87433517e04fb6ce99e8ea1625e3f8cc1a3c70cdd",
+  "candidate_grid": {
+    "PLSR": [
+      "raw|n_components=10",
+      "raw|n_components=20",
+      "raw|n_components=30",
+      "snv|n_components=10",
+      "snv|n_components=20",
+      "snv|n_components=30",
+      "savgol_d1|n_components=10",
+      "savgol_d1|n_components=20",
+      "savgol_d1|n_components=30"
+    ],
+    "SVR_RBF": [
+      "snv|C=10;epsilon=0.05;gamma=scale",
+      "snv|C=10;epsilon=0.1;gamma=scale",
+      "snv|C=100;epsilon=0.05;gamma=scale",
+      "snv|C=100;epsilon=0.1;gamma=scale",
+      "savgol_d1|C=10;epsilon=0.05;gamma=scale",
+      "savgol_d1|C=10;epsilon=0.1;gamma=scale",
+      "savgol_d1|C=100;epsilon=0.05;gamma=scale",
+      "savgol_d1|C=100;epsilon=0.1;gamma=scale"
+    ],
+    "ExtraTrees": [
+      "raw|max_features=0.5;min_samples_leaf=1",
+      "raw|max_features=0.5;min_samples_leaf=2",
+      "raw|max_features=0.5;min_samples_leaf=5",
+      "raw|max_features=1;min_samples_leaf=1",
+      "raw|max_features=1;min_samples_leaf=2",
+      "raw|max_features=1;min_samples_leaf=5"
+    ]
+  },
+  "seed": 2026,
+  "outer_splits": 5,
+  "inner_splits": 4
+}

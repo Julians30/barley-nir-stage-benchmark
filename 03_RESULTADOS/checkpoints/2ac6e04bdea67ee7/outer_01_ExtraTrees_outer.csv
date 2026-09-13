@@ -1,0 +1,2 @@
+family,outer_fold,preprocessing,parameter,candidate_key,mae,rmse,r2,within_1_day,bias,fit_predict_seconds,n_train,n_test,n_train_dishes,n_test_dishes
+ExtraTrees,1,raw,max_features=1;min_samples_leaf=2,raw|max_features=1;min_samples_leaf=2,0.8780605048255382,1.1606412462041464,0.5381412220376065,0.6117297698589458,0.023479543017404944,8.209084749221802,10758,2694,72,18

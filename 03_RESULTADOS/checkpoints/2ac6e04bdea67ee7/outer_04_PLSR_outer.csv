@@ -1,0 +1,2 @@
+family,outer_fold,preprocessing,parameter,candidate_key,mae,rmse,r2,within_1_day,bias,fit_predict_seconds,n_train,n_test,n_train_dishes,n_test_dishes
+PLSR,4,raw,n_components=20,raw|n_components=20,0.7137933202032043,0.8821917556080613,0.7331672136013143,0.7321428571428571,-0.024958700184436466,0.13959431648254395,10764,2688,72,18

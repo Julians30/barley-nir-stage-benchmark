@@ -1,0 +1,7 @@
+family,preprocessing,parameter,outer_folds_selected
+ExtraTrees,raw,max_features=1;min_samples_leaf=2,4
+ExtraTrees,raw,max_features=1;min_samples_leaf=5,1
+PLSR,raw,n_components=20,4
+PLSR,raw,n_components=30,1
+SVR_RBF,savgol_d1,C=100;epsilon=0.05;gamma=scale,4
+SVR_RBF,snv,C=100;epsilon=0.05;gamma=scale,1

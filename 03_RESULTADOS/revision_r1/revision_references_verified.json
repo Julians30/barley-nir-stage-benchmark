@@ -1,0 +1,20 @@
+[
+  {
+    "id": 13,
+    "title": "Studies on the Structure of Water Using Two-Dimensional Near-Infrared Correlation Spectroscopy and Principal Component Analysis",
+    "authors": "Segtnan, V.H.; Šašić, Š.; Isaksson, T.; Ozaki, Y.",
+    "venue": "Analytical Chemistry 73(13), 3153–3161 (2001)",
+    "doi": "10.1021/ac010102n",
+    "verification": ["https://api.crossref.org/works/10.1021/ac010102n", "https://pubmed.ncbi.nlm.nih.gov/11467567/"],
+    "assignment_scope": "Broad water O–H first-overtone region near 1450 nm; original abstract also describes symmetric/antisymmetric stretching combination. No proof of barley moisture concentration or biological causality is inferred."
+  },
+  {
+    "id": 14,
+    "title": "Comparison of the variable importance in projection (VIP) and of the selectivity ratio (SR) methods for variable selection and interpretation",
+    "authors": "Farrés, M.; Platikanov, S.; Tsakovski, S.; Tauler, R.",
+    "venue": "Journal of Chemometrics 29(10), 528–536 (2015)",
+    "doi": "10.1002/cem.2736",
+    "verification": ["https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/cem.2736"],
+    "use": "VIP is a PLS diagnostic; not a model-independent explanation of SVR or a causal attribution."
+  }
+]
