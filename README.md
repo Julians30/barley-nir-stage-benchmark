@@ -6,7 +6,7 @@ The benchmark uses 13,452 spectra, 204 channels, 2,242 kernels and 90 Petri dish
 
 ## Reproducibility status
 
-The partial upload has been completed. The scientific archive commit `9eb973f162fabaef3265a55c21085a13a0246c18` contains all 177 intended files. Local verification on 14 September 2026 passed original dataset/result digests, prediction and partition audits, 105 review metric checks, three VIP tests and execution of all ten notebook code cells with fitting disabled. Full model training was not repeated. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for Windows/Linux commands, exact-version access and fresh-fitting instructions, and [VERIFICATION_2026-09-14.json](VERIFICATION_2026-09-14.json) for the check record. A GitHub Actions workflow now runs saved-result verification. Reviewer access is still required because the repository is private.
+The partial upload has been completed. The scientific archive commit `9eb973f162fabaef3265a55c21085a13a0246c18` contains all 177 intended files. Local verification on 14 September 2026 passed original dataset/result digests, prediction and partition audits, 105 review metric checks, three VIP tests and execution of all ten notebook code cells with fitting disabled. Full model training was not repeated. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for Windows/Linux commands, exact-version access and fresh-fitting instructions, and [VERIFICATION_2026-09-14.json](VERIFICATION_2026-09-14.json) for the check record. A GitHub Actions workflow now runs saved-result verification. The repository is public and can be accessed by reviewers and readers without an invitation.
 
 ## Main finding and scope
 
@@ -24,7 +24,7 @@ Training-only PLS VIP and signed coefficients describe distributed spectral impo
 | `04_MANUSCRITO_CCIS` | Corrected Word manuscript with embedded workflow and spectral interpretation figures and this repository URL |
 | `tools` | Project packaging and repository integrity verification utilities |
 
-The prepared NPZ is stored in 1 MiB binary parts to accommodate upload transport limits. The restore utility reconstructs the exact original file and verifies its SHA-256; spectra and metadata are unchanged. Original archives, duplicate CSV exports, hyperspectral image cubes, temporary renders and unrelated teaching materials are not included. Review/deposit templates in `03_RESULTADOS/revision_r1` are retained unchanged as historical records; their pending-link text is not the current repository status. `REPOSITORY_STATUS.json` records the current URL and private visibility. No public DOI or Zenodo publication is claimed.
+The prepared NPZ is stored in 1 MiB binary parts to accommodate upload transport limits. The restore utility reconstructs the exact original file and verifies its SHA-256; spectra and metadata are unchanged. Original archives, duplicate CSV exports, hyperspectral image cubes, temporary renders and unrelated teaching materials are not included. Review/deposit templates in `03_RESULTADOS/revision_r1` are retained unchanged as historical records; their pending-link text is not the current repository status. `REPOSITORY_STATUS.json` records the current URL and public visibility. No public DOI or Zenodo publication is claimed.
 
 ## Data source and integrity
 
@@ -72,4 +72,4 @@ Full nested fitting is substantially more expensive than auditing the saved resu
 
 ## Access and disclosure
 
-This repository is a **private author working archive**. Reviewers cannot access it without permission. Public release, a software license and any archival DOI require separate author decisions. GitHub is not itself a DOI deposit. AI assistance was used for code development and drafting; the numerical claims were checked against executed, saved external predictions, and no synthetic experimental observations were introduced.
+This repository is a **public reproducibility archive**, released by the repository owner. Reviewers and readers can download or clone it without an invitation. Source-data notices and restrictions still apply; no separate software license is claimed. GitHub is not itself a DOI deposit. AI assistance was used for code development and drafting; the numerical claims were checked against executed, saved external predictions, and no synthetic experimental observations were introduced.

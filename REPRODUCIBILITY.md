@@ -6,7 +6,7 @@ The complete archive was verified on 14 September 2026. All missing files from t
 
 Repository: https://github.com/Julians30/barley-nir-stage-benchmark
 
-The repository is currently private. A reviewer must receive access before the repository link can serve as an accessible submission supplement. Authorized readers can download the ZIP through **Code > Download ZIP**, or clone it using their own GitHub authentication:
+The repository is public. Reviewers and readers can download the ZIP through **Code > Download ZIP**, or clone it without authentication:
 
 ```bash
 git clone https://github.com/Julians30/barley-nir-stage-benchmark.git
@@ -87,4 +87,4 @@ The distributed integrity manifests describe the archived run. After refitting, 
 
 The `Verify archived reproducibility` GitHub Actions workflow runs the saved-result verifier on pushes, pull requests and manual dispatch. It does not fit models. Its actual run status appears in the repository's **Actions** tab; adding the workflow alone is not evidence of a passing remote run.
 
-The corrected manuscript is `04_MANUSCRITO_CCIS/ARTICULO_CEBADA_NIR_GITHUB.docx`. The source dataset DOI, notices and CC BY-NC 4.0 restriction are documented in `01_DATASET` and the rights notice. GitHub access remains the outstanding submission requirement: either provide reviewers access according to the venue's process or release the repository publicly. Historical review/deposit templates describe an earlier plan; they are not requirements of this GitHub-only closure. No archival deposit was created.
+The corrected manuscript is `04_MANUSCRITO_CCIS/ARTICULO_CEBADA_NIR_GITHUB.docx`. The source dataset DOI, notices and CC BY-NC 4.0 restriction are documented in `01_DATASET` and the rights notice. Public GitHub access was confirmed on 14 September 2026 by checking repository visibility and cloning without authentication. The repository access requirement for submission is resolved. Historical review/deposit templates describe an earlier plan; they are not requirements of this GitHub-only closure. No archival deposit was created.

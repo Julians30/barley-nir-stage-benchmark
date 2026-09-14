@@ -1,10 +1,10 @@
 {
   "repository_url": "https://github.com/Julians30/barley-nir-stage-benchmark",
-  "visibility": "private",
+  "visibility": "public",
   "branch": "main",
   "primary_run_signature": "2ac6e04bdea67ee7",
   "zenodo_published_version_doi": null,
-  "public_release_authorized": false,
+  "public_release_authorized": true,
   "software_license_confirmed": false,
   "historical_review_templates_preserved_unchanged": true,
   "current_manuscript": "04_MANUSCRITO_CCIS/ARTICULO_CEBADA_NIR_GITHUB.docx",
@@ -13,7 +13,11 @@
   "local_saved_result_verification": "passed",
   "local_notebook_code_cells_verified": 10,
   "full_model_training_repeated_for_closure": false,
-  "submission_access_status": "reviewer access required; repository remains private",
+  "submission_access_status": "resolved; repository publicly accessible",
   "reproducibility_instructions": "REPRODUCIBILITY.md",
-  "verification_record": "VERIFICATION_2026-09-14.json"
+  "verification_record": "VERIFICATION_2026-09-14.json",
+  "public_access_verified_date_utc": "2026-09-14",
+  "public_access_verification": "Cloned over HTTPS with prompting and credential helpers disabled.",
+  "github_actions_verified_commit": "d78724b7180c65cb7a00fc484381692169c38236",
+  "github_actions_verified_conclusion": "success"
 }

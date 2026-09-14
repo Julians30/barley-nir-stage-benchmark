@@ -22,6 +22,11 @@
   },
   "full_model_training_repeated": false,
   "visibility_at_verification": "private",
-  "remaining_submission_requirement": "Ensure the reviewers can access the repository.",
-  "scope": "Verified archived files, saved-result recalculation and execution of notebook code cells; does not claim a fresh training run or independent biological validation."
+  "remaining_submission_requirement": null,
+  "scope": "Verified archived files, saved-result recalculation and execution of notebook code cells; does not claim a fresh training run or independent biological validation.",
+  "current_visibility": "public",
+  "public_access_verified_date_utc": "2026-09-14",
+  "public_clone_without_authentication": "passed",
+  "github_actions_verified_commit": "d78724b7180c65cb7a00fc484381692169c38236",
+  "github_actions_verified_conclusion": "success"
 }
