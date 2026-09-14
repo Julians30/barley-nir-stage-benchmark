@@ -99,16 +99,19 @@ Comparación principal: cinco pliegues externos por placa; selección de configu
 
 La factibilidad anterior orientó las rejillas usando este mismo dataset. La validación anidada evita el uso directo del test externo en la selección interna actual, pero no convierte el estudio en una prueba externa intacta ni en un protocolo prerregistrado.
 
-Para recomputar, cambie `RUN_FULL_ANALYSIS` a `True`. El script reanuda checkpoints compatibles. Si todos los resultados ya existen, no repite la corrida. Una nueva corrida forzada se realiza explícitamente desde la línea de comandos con `--force`."""),
+Para entrenar de nuevo, cambie `RUN_FULL_ANALYSIS` a `True` y elija una carpeta inexistente en `FRESH_PROJECT_DIR`. El helper `tools/recompute_project.py` copia datos verificados y scripts, sin resultados ni checkpoints anteriores, y fuerza un nuevo ajuste. También calcula diagnósticos y audita las nuevas predicciones. El archivo publicado se conserva. La corrida completa no fue repetida durante la auditoría de cierre."""),
     cell("code", """RUN_FULL_ANALYSIS = False
+FRESH_PROJECT_DIR = PROJECT_DIR.parent / (PROJECT_DIR.name + '_fresh_fit')
 if RUN_FULL_ANALYSIS:
-    assert CODE_FILE.exists(), f'Script no encontrado: {CODE_FILE}'
-    spec = importlib.util.spec_from_file_location('barley_validation', CODE_FILE)
-    analysis = importlib.util.module_from_spec(spec)
+    import subprocess
     import sys
-    sys.modules[spec.name] = analysis
-    spec.loader.exec_module(analysis)
-    analysis.main(PROJECT_DIR)
+    helper = PROJECT_DIR / 'tools' / 'recompute_project.py'
+    assert helper.exists(), f'Copie también la carpeta tools del repositorio: {helper}'
+    subprocess.run([sys.executable, str(helper), '--destination', str(FRESH_PROJECT_DIR)], check=True)
+    PROJECT_DIR = FRESH_PROJECT_DIR
+    DATA_FILE = PROJECT_DIR / '01_DATASET' / 'barley_nir_long.npz'
+    RESULTS_DIR = PROJECT_DIR / '03_RESULTADOS'
+    CODE_FILE = PROJECT_DIR / '02_CODIGO_NOTEBOOKS' / 'run_nested_validation.py'
 
 METADATA_FILE = RESULTS_DIR / 'nested_run_metadata.json'
 assert METADATA_FILE.exists(), 'Corrida incompleta: ejecute el script antes de leer resultados.'

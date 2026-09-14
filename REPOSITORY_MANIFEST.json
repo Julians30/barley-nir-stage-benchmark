@@ -25,6 +25,12 @@
       "git_blob_sha": "0bb46d28d78ba17a404167ed48d79c7ddd65be2a"
     },
     {
+      "path": "01_DATASET/README.md",
+      "bytes": 2211,
+      "sha256": "81862b39c953a8e0db5dfed10fdfbb7f6e06f2825b87cb428e478383be0a5327",
+      "git_blob_sha": "313ecaaf6633c1b2379d42a59edbbd9e90aa4b74"
+    },
+    {
       "path": "01_DATASET/SOURCE_LICENSE.txt",
       "bytes": 195,
       "sha256": "e0315d33c4062cdb1c1570076a4c6db3baba9569ac6168b10ad7a26529d4d916",
@@ -164,9 +170,9 @@
     },
     {
       "path": "02_CODIGO_NOTEBOOKS/02_VALIDACION_ANIDADA_CEBADA_NIR.ipynb",
-      "bytes": 1600278,
-      "sha256": "53d843b28f535bb79af07e7963ea504a85a85d527848dad93d0357406c573712",
-      "git_blob_sha": "c3d1fa1ec29051c093afc9512286e8a6feb200b0"
+      "bytes": 1600728,
+      "sha256": "3d2fccf88165bc6d2be5c85445c3a61a5771bb06cfe0083bc16c1c1101449608",
+      "git_blob_sha": "03145e76b77c35bd13dd2a40d93018d2557274d3"
     },
     {
       "path": "02_CODIGO_NOTEBOOKS/audit_completed_results.py",
@@ -188,9 +194,9 @@
     },
     {
       "path": "02_CODIGO_NOTEBOOKS/build_validation_notebook.py",
-      "bytes": 19898,
-      "sha256": "11480a1b1bcfaadebc06963648a146336c2dde43b6a7fb0ec48834b820bc335f",
-      "git_blob_sha": "ea98f4dd8a7b378a149ed2d592aaaffb05b756c7"
+      "bytes": 20344,
+      "sha256": "98904e2fb087636095caccd3be54ecdb1a3b234b007400bb8afc7dc1c54a4887",
+      "git_blob_sha": "5d4aaae907d1ce047f199fcc9a81691d0ce260ae"
     },
     {
       "path": "02_CODIGO_NOTEBOOKS/run_nested_validation.py",
@@ -1027,22 +1033,34 @@
       "git_blob_sha": "5c4490e33ccccd482ec9bec4a1dfc7bbb743396a"
     },
     {
+      "path": "AUDIT_2026-09-14.md",
+      "bytes": 8120,
+      "sha256": "c33f9612dcc7226acd9f39dbcea03887c3450a2a022ec83b3c1bcc1645d1a88e",
+      "git_blob_sha": "5b6f1af6dedd9cbbe4f083f050baafca729f271f"
+    },
+    {
+      "path": "AUDIT_EVIDENCE_2026-09-14.json",
+      "bytes": 3470,
+      "sha256": "74734f910d023d3a7fcc7871d927943e1f8abe4da311cd32457f6b41681cd75c",
+      "git_blob_sha": "2b15924db04be4f588aa22ba1b9c601891f3c686"
+    },
+    {
       "path": "README.md",
-      "bytes": 6982,
-      "sha256": "fc7103718350fb3cb9c2d64ec5168d0e1c8bd9aed781e87fab7a1227328b5cfe",
-      "git_blob_sha": "9e0a994909d6d314f900820c8e286d17d56381c3"
+      "bytes": 7851,
+      "sha256": "89a5415bc9082ca4ef3ff5c3bdfc95baa726e065c9eba8a0709e5f85f4c2c7e1",
+      "git_blob_sha": "5c09f92c7d676d06c1d8fe0902fc20b9f7facce0"
     },
     {
       "path": "REPOSITORY_STATUS.json",
-      "bytes": 1152,
-      "sha256": "ffc636d41522a8f474cd7a3eb0d19df6812d6977139095d922df2d88c0a64445",
-      "git_blob_sha": "763a41fa8f935918789738481ebd49bec0c29edd"
+      "bytes": 1504,
+      "sha256": "3179f5ddb410a681ad68617d586e8dcc55b653a6f99535e717de1475ab1286e6",
+      "git_blob_sha": "c598da79dc0e771d2913dcba1082165465e918a1"
     },
     {
       "path": "REPRODUCIBILITY.md",
-      "bytes": 5104,
-      "sha256": "ec65b4ed8f90be1b9f52b4b36b871f5f0b985dca654aa27461d2bf3dccf19366",
-      "git_blob_sha": "05cd3a47f29b61be917b633a6dda1a382af989d8"
+      "bytes": 6303,
+      "sha256": "ad2553af7fcf9a0da3d11c08f1e96687347f0bc8a5ca2ef4ea278c602f63e147",
+      "git_blob_sha": "c3e39d77855d5898f7dc0539763bc693fe24d816"
     },
     {
       "path": "VERIFICATION_2026-09-14.json",
@@ -1057,22 +1075,34 @@
       "git_blob_sha": "268293bbc04c1e8233d298defef333f59980c34f"
     },
     {
+      "path": "tools/audit_reviewer_readiness.py",
+      "bytes": 16479,
+      "sha256": "0b707036b13c62bae193b70b9ceaaf190185a18bf4692bb2cd034baa57d3ecb0",
+      "git_blob_sha": "dc40717e74b7f96e7232ee0709778ab15902b6d4"
+    },
+    {
       "path": "tools/prepare_github_project.py",
       "bytes": 6820,
       "sha256": "d64f9f64c7f18abb3fffcef33d81c8a738c9c62781c6ef87666a837b47de16f2",
       "git_blob_sha": "5bb86ff41d00b5a47385b6e846e48873ddd0ba57"
     },
     {
+      "path": "tools/recompute_project.py",
+      "bytes": 4296,
+      "sha256": "08d26f41d89b8ad2b64f5124d5e1a3e6b14132a9317c8a8d4f9a6ee338a225da",
+      "git_blob_sha": "4adcc2a6369358d9e84611ad36454f31859d5ed6"
+    },
+    {
       "path": "tools/restore_dataset.py",
-      "bytes": 1369,
-      "sha256": "4787a395e7ec35c4b7c1b81b8b99f6174991f85582a45ccea1decb1067f22a44",
-      "git_blob_sha": "ebd39081aeb890c0a55d06072551a5c9136372c8"
+      "bytes": 1684,
+      "sha256": "2c36650fbaaa2606323a476044786a545852a845f1a99c0bb3b500b20f8c6401",
+      "git_blob_sha": "8f31b2925b8a281ec6dd82034f041383cb5c44de"
     },
     {
       "path": "tools/verify_repository.py",
-      "bytes": 1679,
-      "sha256": "cd6e536820c8cf8755f54e643b3b7734b8b80c60924b5fb04cd2470a8be27d2a",
-      "git_blob_sha": "ba72bde3b89b6fc76ce12c2c47837202f75cd2f2"
+      "bytes": 1927,
+      "sha256": "6b8c8d44463caa6887f4a32af80ac9eea31938f8b86ac0e57be2e5543815e3c0",
+      "git_blob_sha": "d799c2993d28e21ebee47ff398c04c70558001f1"
     }
   ]
 }

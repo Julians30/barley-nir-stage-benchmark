@@ -28,11 +28,14 @@ def verify_files():
 
 
 def main():
+    if sys.flags.optimize:
+        raise RuntimeError('Audit assertions require normal Python execution; do not use -O or PYTHONOPTIMIZE.')
     subprocess.run([sys.executable, str(ROOT / 'tools/restore_dataset.py')], cwd=ROOT, check=True)
     verify_files()
     code = ROOT / '02_CODIGO_NOTEBOOKS'
     for script in ['audit_completed_results.py', 'audit_review_results.py', 'test_review_diagnostics.py']:
         subprocess.run([sys.executable, str(code / script)], cwd=ROOT, check=True)
+    subprocess.run([sys.executable, str(ROOT / 'tools/audit_reviewer_readiness.py')], cwd=ROOT, check=True)
     verify_files()
     print('PASS: archived integrity, prediction audits and VIP tests; no model fitting.')
 

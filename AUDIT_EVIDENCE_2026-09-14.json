@@ -1,0 +1,118 @@
+{
+  "result": "passed",
+  "audited_base_commit": "9c998bd2ec5e3bbe1119e8247bdcbf6e9cbf1d2e",
+  "checks": [
+    "Complete inner memberships, rankings, selection flags and primary metadata",
+    "All 6000 paired bootstrap replicates regenerated from seed and cluster sums",
+    "Fixed-partition memberships, overlaps and all reported means",
+    "All six domain inner selections independently checked",
+    "Every numeric manuscript table cell, three original embedded figures and repository link",
+    "Every prepared spectral value and original annotation matched the retained source subset",
+    "Fresh checkpoint-free outer fit for each family in one selected fold",
+    "Fresh training-only PLS profiles checked using independent VIP formula for fold 1"
+  ],
+  "bootstrap_max_absolute_difference": 7.771561172376096e-16,
+  "exact_duplicate_spectra": 0,
+  "partition_overlap_counts": {
+    "random_row": {
+      "kernel_overlap_each_fold": [
+        1652,
+        1673,
+        1659,
+        1670,
+        1636
+      ],
+      "dish_overlap_each_fold": [
+        90,
+        90,
+        90,
+        90,
+        90
+      ]
+    },
+    "grain_disjoint": {
+      "kernel_overlap_each_fold": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "dish_overlap_each_fold": [
+        90,
+        90,
+        90,
+        90,
+        90
+      ]
+    },
+    "dish_disjoint": {
+      "kernel_overlap_each_fold": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "dish_overlap_each_fold": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "source_subset_comparison": {
+    "archive_sha256": "b3cfd95c64ef9102a3781c34b6892a5cd5fbaec7dd26d710026ba2e0bc257c7f",
+    "spectra_exactly_matched": 13452,
+    "channels_each": 204,
+    "germinating_kernels": 381
+  },
+  "fresh_outer_refits": [
+    {
+      "family": "PLSR",
+      "outer_fold": 1,
+      "max_absolute_prediction_difference": 7.815970093361102e-13,
+      "fit_predict_seconds": 0.25503483300008156
+    },
+    {
+      "family": "SVR_RBF",
+      "outer_fold": 1,
+      "max_absolute_prediction_difference": 1.3322676295501878e-15,
+      "fit_predict_seconds": 21.31388006499992
+    },
+    {
+      "family": "ExtraTrees",
+      "outer_fold": 1,
+      "max_absolute_prediction_difference": 1.7763568394002505e-15,
+      "fit_predict_seconds": 32.07223856199994
+    }
+  ],
+  "full_nested_search_repeated": false,
+  "elapsed_seconds": 55.915634298999976,
+  "scope": "Independent saved-result calculations, seed regeneration, manuscript checks; optional retained-source comparison and selected-fold refits. No independent acquisition sequence or full nested retraining.",
+  "fresh_training_only_pls_profile_checks": [
+    {
+      "outer_fold": 1,
+      "training_subset": "all_six_stages",
+      "max_absolute_vip_difference": 4.440892098500626e-16,
+      "max_absolute_coefficient_difference": 3.552713678800501e-15
+    },
+    {
+      "outer_fold": 1,
+      "training_subset": "post_moisture_1_to_5",
+      "max_absolute_vip_difference": 4.440892098500626e-16,
+      "max_absolute_coefficient_difference": 7.105427357601002e-15
+    }
+  ],
+  "utility_failure_checks": [
+    "Corrupted part rejected",
+    "Temporary failed restoration removed",
+    "Incorrect existing dataset preserved",
+    "Optimized Python verifier rejected",
+    "Fresh project excludes archived outputs",
+    "Existing output destination refused"
+  ],
+  "manuscript_render_pages_reviewed": 15
+}

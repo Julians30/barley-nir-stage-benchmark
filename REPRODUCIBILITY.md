@@ -42,7 +42,7 @@ py -3.12 -m venv .venv
 .venv\Scripts\python.exe tools\verify_repository.py
 ```
 
-The verifier restores the prepared NPZ from its 20 binary parts and checks the original SHA-256 before loading serialized metadata. It then checks every file in `REPOSITORY_MANIFEST.json`, the 134 entries of the original scientific result manifest, primary and review prediction metrics, outer/inner dish separation, training-only candidate ranking, and saved bootstrap quantiles. It finishes with three VIP diagnostic tests and rechecks archive integrity after the audits.
+The verifier restores the prepared NPZ from its 20 binary parts and checks the original SHA-256 before loading serialized metadata. It then checks every file in `REPOSITORY_MANIFEST.json`, the 134 entries of the original scientific result manifest, primary and review prediction metrics, outer/inner dish separation, training-only candidate ranking, and saved bootstrap quantiles. It also runs three VIP diagnostic tests and the independent reviewer audit, which regenerates all 6,000 bootstrap metric replicates, checks fixed-partition/domain selections and compares every numeric manuscript table cell and embedded figure with the saved results. It rechecks archive integrity after the audits. Optimized Python (`-O` or `PYTHONOPTIMIZE`) is rejected because the older scientific audit scripts rely on assertions.
 
 Expected final message:
 
@@ -72,14 +72,17 @@ Open `02_CODIGO_NOTEBOOKS/02_VALIDACION_ANIDADA_CEBADA_NIR.ipynb`. Keep `RUN_FUL
 
 ## Fit the models again
 
-Make a separate project copy first. A forced run overwrites result files in that copy:
+Prepare a new output directory with no archived predictions, diagnostics or checkpoints:
 
 ```bash
-python 02_CODIGO_NOTEBOOKS/run_nested_validation.py --project-dir . --force
-python 02_CODIGO_NOTEBOOKS/run_review_additions.py --project-dir .
+python tools/recompute_project.py --destination ../barley-fresh-fit
 ```
 
-Primary nested validation uses five dish-disjoint outer folds, four dish-disjoint inner folds and 23 candidates across PLSR, RBF SVR and ExtraTrees (460 inner fits and 15 outer fits). Supplementary splitting and domain checks add fits. Seeds, grids, package versions and dataset digest are recorded in `03_RESULTADOS/nested_run_metadata.json` and the checkpoint context. The scripts can resume compatible runs; `--force` explicitly bypasses saved primary fits.
+The destination must not exist and must be outside the published project. The helper restores and checks the original dataset, copies the data and release scripts, forces primary fitting, runs fresh review diagnostics and audits the new predictions. It records script and data digests in `RECOMPUTATION_PROVENANCE.json`. To inspect the prepared layout without starting any training, add `--prepare-only`.
+
+The notebook's `RUN_FULL_ANALYSIS = True` route invokes this same helper using `FRESH_PROJECT_DIR` and then reads the new results. Keep the default `False` to examine archived results. Full end-to-end nested retraining was not repeated in the closure audit; preparation/refusal checks and fresh selected outer fits were tested.
+
+Primary nested validation uses five dish-disjoint outer folds, four dish-disjoint inner folds and 23 candidates across PLSR, RBF SVR and ExtraTrees (460 inner fits and 15 outer fits). Supplementary splitting and domain checks add fits. Seeds, grids, package versions and dataset digest are recorded in `03_RESULTADOS/nested_run_metadata.json` and the checkpoint context. Direct use of the primary script can resume compatible runs; `--force` explicitly bypasses saved primary fits. Running it in a copy containing old review diagnostics does not make those diagnostics compatible with the new fit. Use the fresh-project helper above to avoid that conflict.
 
 The distributed integrity manifests describe the archived run. After refitting, they are intentionally no longer an integrity certificate for the new outputs. Preserve the new predictions, settings and environment as a separate run and regenerate its provenance before treating it as a new release. Do not claim a fresh fit is byte-identical to the archive merely because its rounded metrics agree. Full training was not repeated in the September 14 closure check.
 

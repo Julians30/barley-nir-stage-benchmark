@@ -19,5 +19,11 @@
   "public_access_verified_date_utc": "2026-09-14",
   "public_access_verification": "Cloned over HTTPS with prompting and credential helpers disabled.",
   "github_actions_verified_commit": "d78724b7180c65cb7a00fc484381692169c38236",
-  "github_actions_verified_conclusion": "success"
+  "github_actions_verified_conclusion": "success",
+  "reviewer_audit_report": "AUDIT_2026-09-14.md",
+  "reviewer_audit_evidence": "AUDIT_EVIDENCE_2026-09-14.json",
+  "reviewer_audit_result": "passed with execution/documentation corrections",
+  "fresh_selected_outer_fits_verified": 3,
+  "full_nested_search_repeated_in_audit": false,
+  "unresolved_experimental_limitation": "stage-session confounding"
 }

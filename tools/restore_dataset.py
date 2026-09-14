@@ -17,17 +17,23 @@ def main():
         print('Dataset already present; original SHA-256 verified.')
         return
     digest, size = hashlib.sha256(), 0
-    with tempfile.NamedTemporaryFile(dir=DATA, prefix='dataset_restore_', delete=False) as tmp:
-        temporary = Path(tmp.name)
-        for part in info['parts']:
-            raw = (DATA / part['path']).read_bytes()
-            assert len(raw) == part['bytes'], part['path']
-            assert hashlib.sha256(raw).hexdigest() == part['sha256'], part['path']
-            tmp.write(raw)
-            digest.update(raw)
-            size += len(raw)
-    assert size == info['bytes'] and digest.hexdigest() == info['sha256']
-    temporary.replace(target)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=DATA, prefix='dataset_restore_', delete=False) as tmp:
+            temporary = Path(tmp.name)
+            for part in info['parts']:
+                raw = (DATA / part['path']).read_bytes()
+                if len(raw) != part['bytes'] or hashlib.sha256(raw).hexdigest() != part['sha256']:
+                    raise RuntimeError(f"Dataset part failed integrity checks: {part['path']}")
+                tmp.write(raw)
+                digest.update(raw)
+                size += len(raw)
+        if size != info['bytes'] or digest.hexdigest() != info['sha256']:
+            raise RuntimeError('Reconstructed dataset failed total size or SHA-256 verification.')
+        temporary.replace(target)
+    finally:
+        if temporary is not None and temporary.exists():
+            temporary.unlink()
     print(f'Reconstructed {target.name}: {size} bytes; original SHA-256 verified.')
 
 

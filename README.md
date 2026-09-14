@@ -8,6 +8,10 @@ The benchmark uses 13,452 spectra, 204 channels, 2,242 kernels and 90 Petri dish
 
 The partial upload has been completed. The scientific archive commit `9eb973f162fabaef3265a55c21085a13a0246c18` contains all 177 intended files. Local verification on 14 September 2026 passed original dataset/result digests, prediction and partition audits, 105 review metric checks, three VIP tests and execution of all ten notebook code cells with fitting disabled. Full model training was not repeated. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for Windows/Linux commands, exact-version access and fresh-fitting instructions, and [VERIFICATION_2026-09-14.json](VERIFICATION_2026-09-14.json) for the check record. A GitHub Actions workflow now runs saved-result verification. The repository is public and can be accessed by reviewers and readers without an invitation.
 
+## Reviewer audit
+
+The [audit report](AUDIT_2026-09-14.md) records independent numerical checks, exact comparison against the retained source subset, three fresh selected-fold model fits and the corrections made to execution/integrity utilities. It separates confirmed computational reproducibility from the unresolved stage–session limitation. See [dataset contents and schema](01_DATASET/README.md) for the exact distributed files. Historical review templates describe earlier drafts; consult this audit and the current status file for the completed GitHub work.
+
 ## Main finding and scope
 
 The original out-of-fold RBF SVR predictions give **post-moisture MAE 0.680** (stages 1–5; R² 0.618), versus aggregate MAE 0.577 including the easy dry reference. Random-row splitting changes MAE by only approximately −0.021 relative to dish grouping: an informative negative finding, not evidence of a large leakage effect. Stage coincides with acquisition session, so session fingerprinting cannot be excluded. This is not an independently validated biological clock, moisture assay or germination/viability predictor.
@@ -22,7 +26,7 @@ Training-only PLS VIP and signed coefficients describe distributed spectral impo
 | `02_CODIGO_NOTEBOOKS` | Nested-validation pipeline, review diagnostics, audits and executed validation notebook |
 | `03_RESULTADOS` | Original OOF predictions, candidate scores, bootstrap draws, diagnostic profiles, figures and compatible checkpoints |
 | `04_MANUSCRITO_CCIS` | Corrected Word manuscript with embedded workflow and spectral interpretation figures and this repository URL |
-| `tools` | Project packaging and repository integrity verification utilities |
+| `tools` | Dataset restoration, repository/reviewer audits and isolated fresh fitting; the packaging script is a maintainer utility requiring the earlier source workspace |
 
 The prepared NPZ is stored in 1 MiB binary parts to accommodate upload transport limits. The restore utility reconstructs the exact original file and verifies its SHA-256; spectra and metadata are unchanged. Original archives, duplicate CSV exports, hyperspectral image cubes, temporary renders and unrelated teaching materials are not included. Review/deposit templates in `03_RESULTADOS/revision_r1` are retained unchanged as historical records; their pending-link text is not the current repository status. `REPOSITORY_STATUS.json` records the current URL and public visibility. No public DOI or Zenodo publication is claimed.
 
@@ -61,12 +65,13 @@ python -m jupyter lab
 
 Reconstruct the NPZ with `python tools/restore_dataset.py` before opening `02_CODIGO_NOTEBOOKS/02_VALIDACION_ANIDADA_CEBADA_NIR.ipynb`. Its default switches read and audit saved results. Run Jupyter from the root or code folder. The Colab-specific setup uses the original Drive layout `/content/drive/MyDrive/CITI2027_CEBADA_NIR`; copy these canonical folders there if using that route.
 
-To force a genuinely new primary fit, first copy the project so that the archived results remain untouched:
+To fit again in a new output project without any archived result checkpoints:
 
 ```bash
-python 02_CODIGO_NOTEBOOKS/run_nested_validation.py --project-dir . --force
-python 02_CODIGO_NOTEBOOKS/run_review_additions.py --project-dir .
+python tools/recompute_project.py --destination ../barley-fresh-fit
 ```
+
+The destination must not exist and must be outside this archive. Add `--prepare-only` to inspect the fresh layout without training. The helper forces primary fitting, runs new review diagnostics and audits their predictions. Setting `RUN_FULL_ANALYSIS = True` in the notebook now uses this same isolated route.
 
 Full nested fitting is substantially more expensive than auditing the saved results. The script otherwise resumes compatible checkpoints or skips an already completed compatible run, and rejects mixed dataset/settings/software versions. Recomputed results may differ on other environments and must not be represented as the archived run without new provenance. The bootstrap is conditional on fixed OOF predictions, not a refit bootstrap.
 
