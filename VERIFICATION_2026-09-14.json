@@ -1,0 +1,27 @@
+{
+  "verified_date_utc": "2026-09-14",
+  "scientific_archive_commit": "9eb973f162fabaef3265a55c21085a13a0246c18",
+  "scientific_archive_files": 177,
+  "original_result_manifest_entries": 134,
+  "primary_run_signature": "2ac6e04bdea67ee7",
+  "python": "3.12.14",
+  "dependencies": "Exact versions in requirements.txt",
+  "dataset_sha256": "3ee66476e6564e6b20d6b3c87433517e04fb6ce99e8ea1625e3f8cc1a3c70cdd",
+  "primary_oof_sha256": "42cf6520e0c86cc35e8ced1eeb30a0e05698a7538c7cd8aebe9d0b5bac056a64",
+  "checks": {
+    "repository_and_original_result_digests": "passed",
+    "primary_metrics_and_inner_selection": "passed",
+    "outer_and_inner_dish_separation": "passed",
+    "paired_saved_bootstrap_intervals": "passed",
+    "six_domain_test_memberships_and_metrics": "passed",
+    "review_metric_checks": 105,
+    "vip_unit_tests_passed": 3,
+    "notebook_code_cells_executed": 10,
+    "notebook_fitting_switches_disabled": true,
+    "remote_scientific_tree_matches_manifest": true
+  },
+  "full_model_training_repeated": false,
+  "visibility_at_verification": "private",
+  "remaining_submission_requirement": "Ensure the reviewers can access the repository.",
+  "scope": "Verified archived files, saved-result recalculation and execution of notebook code cells; does not claim a fresh training run or independent biological validation."
+}

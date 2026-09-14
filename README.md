@@ -4,6 +4,10 @@ Reproducible computational materials for **Grouped Validation of Machine Learnin
 
 The benchmark uses 13,452 spectra, 204 channels, 2,242 kernels and 90 Petri dishes from one six-stage acquisition sequence. Five outer and four inner folds keep dishes disjoint; model preprocessing and hyperparameter selection use training data only.
 
+## Reproducibility status
+
+The partial upload has been completed. The scientific archive commit `9eb973f162fabaef3265a55c21085a13a0246c18` contains all 177 intended files. Local verification on 14 September 2026 passed original dataset/result digests, prediction and partition audits, 105 review metric checks, three VIP tests and execution of all ten notebook code cells with fitting disabled. Full model training was not repeated. See [REPRODUCIBILITY.md](REPRODUCIBILITY.md) for Windows/Linux commands, exact-version access and fresh-fitting instructions, and [VERIFICATION_2026-09-14.json](VERIFICATION_2026-09-14.json) for the check record. A GitHub Actions workflow now runs saved-result verification. Reviewer access is still required because the repository is private.
+
 ## Main finding and scope
 
 The original out-of-fold RBF SVR predictions give **post-moisture MAE 0.680** (stages 1–5; R² 0.618), versus aggregate MAE 0.577 including the easy dry reference. Random-row splitting changes MAE by only approximately −0.021 relative to dish grouping: an informative negative finding, not evidence of a large leakage effect. Stage coincides with acquisition session, so session fingerprinting cannot be excluded. This is not an independently validated biological clock, moisture assay or germination/viability predictor.

@@ -7,5 +7,13 @@
   "public_release_authorized": false,
   "software_license_confirmed": false,
   "historical_review_templates_preserved_unchanged": true,
-  "current_manuscript": "04_MANUSCRITO_CCIS/ARTICULO_CEBADA_NIR_GITHUB.docx"
+  "current_manuscript": "04_MANUSCRITO_CCIS/ARTICULO_CEBADA_NIR_GITHUB.docx",
+  "scientific_archive_commit": "9eb973f162fabaef3265a55c21085a13a0246c18",
+  "archive_upload_complete": true,
+  "local_saved_result_verification": "passed",
+  "local_notebook_code_cells_verified": 10,
+  "full_model_training_repeated_for_closure": false,
+  "submission_access_status": "reviewer access required; repository remains private",
+  "reproducibility_instructions": "REPRODUCIBILITY.md",
+  "verification_record": "VERIFICATION_2026-09-14.json"
 }
