@@ -2,6 +2,10 @@
 
 Reproducible computational materials for **Grouped Validation of Machine Learning for Moisture Exposure Stage Estimation in Barley Using NIR Spectra**, by Julián Coronel Reyes (corresponding author), Vanessa Vergara-Lozano and Carlota Delgado-Vera.
 
+![Status](https://img.shields.io/badge/Status-Accepted%20%C2%B7%20Springer%20CCIS-2F855A)
+
+> **Editorial status (24 October 2026):** paper **accepted** for publication in *Communications in Computer and Information Science* (CCIS, Springer). The DOI will be added once assigned.
+
 The benchmark uses 13,452 spectra, 204 channels, 2,242 kernels and 90 Petri dishes from one six-stage acquisition sequence. Five outer and four inner folds keep dishes disjoint; model preprocessing and hyperparameter selection use training data only.
 
 ## Reproducibility status
